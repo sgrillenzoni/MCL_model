@@ -1,0 +1,34 @@
+# MATLAB / Simulink files regenerated automatically: do not track
+
+# Autosave and backup files
+*.asv
+*.m~
+*.autosave
+*.slx.r*
+*.mdl.r*
+*.bak
+
+# Simulink cache and code generation
+*.slxc
+slprj/
+sccprj/
+codegen/
+*_grt_rtw/
+*_ert_rtw/
+
+# Compiled files
+*.mex*
+*.p
+
+# Packaged apps and toolboxes
+*.mlappinstall
+*.mltbx
+*.ctf
+
+# Generated help search folders
+helpsearch*/
+
+# Operating system files
+Thumbs.db
+desktop.ini
+.DS_Store
