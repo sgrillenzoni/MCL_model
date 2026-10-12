@@ -452,8 +452,19 @@ RT_anteriorTibial_right = 41.93;
 CT_anteriorTibial_right = 0.004437;
 
 %% ===================== Venous pressure ========================
-P_venous = 5;   % [mmHg] Venous pressure at the outlet of all terminal resistances RT (downstream end of the peripheral beds; physiological range ~2-8 mmHg). Use a single source shared by all 28 terminals.
+P_venous = 8;   % [mmHg] Venous pressure at the outlet of all terminal resistances RT (downstream end of the peripheral beds; physiological range ~2-8 mmHg). Use a single source shared by all 28 terminals.
 
+%% Total arterial compliance (segments + terminals)
+% Lumped equivalent for a 2-element Windkessel: at low frequency all the
+% compliances charge together, so the equivalent is their sum.
+clear C_total                          % avoid summing a previous result
+vC = [who('C_*'); who('CT_*')];
+C_total = 0;
+for k = 1:numel(vC)
+    C_total = C_total + eval(vC{k});
+end
+clear vC k
+fprintf('Total arterial compliance: %.3f mL/mmHg\n', C_total);
 %% Sanity check
 % All terminal resistances in parallel should give the total peripheral
 % resistance, about 1 mmHg*s/mL.
@@ -489,4 +500,5 @@ RT_all = [ ...
 ];
 fprintf('Stergiopulos parameters loaded: 55 segments, %d terminal loads.\n', numel(RT_all));
 fprintf('Total peripheral resistance (terminals in parallel): %.3f mmHg*s/mL\n', 1/sum(1./RT_all));
+R_periph = 1/sum(1./RT_all);   % [mmHg*s/mL] total peripheral resistance
 clear RT_all
