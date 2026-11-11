@@ -1,6 +1,6 @@
-# MATLAB / Simulink files regenerated automatically: do not track
+# Files regenerated automatically by MATLAB / Simulink: not tracked
 
-# Autosave and backup files
+# Autosave and backup
 *.asv
 *.m~
 *.autosave
@@ -15,20 +15,17 @@ sccprj/
 codegen/
 *_grt_rtw/
 *_ert_rtw/
-
-# Compiled files
 *.mex*
-*.p
 
-# Packaged apps and toolboxes
-*.mlappinstall
-*.mltbx
-*.ctf
+# Large external data (download, see README)
+data/pwdb_sim1/
+*.his
 
-# Generated help search folders
-helpsearch*/
+# Simulation outputs: only the small calibration results are tracked
+*.mat
+!calibration/results/*.mat
 
-# Operating system files
+# Operating system
 Thumbs.db
 desktop.ini
 .DS_Store

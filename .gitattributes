@@ -1,2 +1,8 @@
-# Auto detect text files and perform LF normalization
 * text=auto
+*.m    text diff=matlab
+*.csv  text
+*.md   text
+*.slx  binary
+*.mdl  binary
+*.mat  binary
+*.fig  binary
