@@ -2,6 +2,8 @@
 % Add one line here for each new parameter file.
 parameters_stergiopulos;
 parameters_ferreira;
+parameters_backflowcontrol;
+parameters_vascular_tuning;
 
 MODE = 1; % 1 = numerical, 2 = testbench
 %% Butterworth low-pass for flow display (2nd order, analog)

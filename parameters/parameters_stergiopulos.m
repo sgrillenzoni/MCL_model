@@ -452,7 +452,7 @@ RT_anteriorTibial_right = 41.93;
 CT_anteriorTibial_right = 0.004437;
 
 %% ===================== Venous pressure ========================
-P_venous = 8;   % [mmHg] Venous pressure at the outlet of all terminal resistances RT (downstream end of the peripheral beds; physiological range ~2-8 mmHg). Use a single source shared by all 28 terminals.
+P_venous = 7.52;   % [mmHg] Venous pressure at the outlet of all terminal resistances RT (downstream end of the peripheral beds; physiological range ~2-8 mmHg). Use a single source shared by all 28 terminals.
 
 %% Total arterial compliance (segments + terminals)
 % Lumped equivalent for a 2-element Windkessel: at low frequency all the

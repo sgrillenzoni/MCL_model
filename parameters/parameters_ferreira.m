@@ -31,7 +31,7 @@ end
 
 %% ===================== Heart rate and elastance (eqs. 2-3) ======================
 HR   = 75;               % [bpm] heart rate
-Emax = 2.0;              % [mmHg/mL] end-systolic elastance (slope of ESPVR)
+Emax = 2;              % [mmHg/mL] end-systolic elastance (slope of ESPVR)
 Emin = 0.06;             % [mmHg/mL] end-diastolic elastance (slope of EDPVR)
                          %   with LAP = 5 mmHg this gives a low filling volume;
                          %   lower it (e.g. 0.04) if pressures come out too low
@@ -52,7 +52,7 @@ R1 = R_periph;           % [mmHg*s/mL] systemic resistance = total peripheral
 C3 = C_total;            % [mL/mmHg] total arterial compliance of Stergiopulos
                          %   (sum of segment and terminal compliances);
                          %   paper value (Table II): 1.33
-
+                       
 %% ===================== Boundary conditions ======================
 LAP = P_venous;          % [mmHg] constant atrial pressure = venous pressure
                          %   of the Stergiopulos model (same downstream node)
